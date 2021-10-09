@@ -2,9 +2,9 @@
 
 Aufgaben: https://bwinf.de/bundeswettbewerb/40/1/
 
-# Struktur
+## Struktur
 
-# Mitwirkende
+## Mitwirkende
 
 * Bruno Hoffmann:
   * Aufgabe 2: "Vollgeladen"
