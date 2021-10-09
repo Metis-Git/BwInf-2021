@@ -1,6 +1,6 @@
 # BwInf-2021
 
-Aufgaben: https://bwinf.de/bundeswettbewerb/40/1/
+Aufgaben: https://bwinf.de/fileadmin/bundeswettbewerb/40/Bundeswettbewerb-Aufgabenblatt.pdf
 
 ## Struktur
 
