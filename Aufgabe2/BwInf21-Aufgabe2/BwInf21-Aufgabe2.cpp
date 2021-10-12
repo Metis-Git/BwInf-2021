@@ -29,9 +29,9 @@ unsigned long calltime;
 #endif
 
 void eval(int hotel, int prevs[], int level = 0) {
-
+#ifdef CHRONOMETER
 	calltime++;
-
+#endif
 	// better path was already found
 	if (hotels[hotel].rating <= bestPathRating) return;
 
@@ -59,7 +59,7 @@ void eval(int hotel, int prevs[], int level = 0) {
 		}
 	}
 
-	// Zeitüberschreitung
+	// ZeitÃ¼berschreitung
 	if (level >= maxDays-1) return;
 
 
