@@ -75,12 +75,6 @@ void eval(int hotel, int prevs[], int level = 0) {
 
 void evaluateFile() {
 
-	// measurement of time
-#ifdef CHRONOMETER
-	calltime = 0;
-	start_point = std::chrono::high_resolution_clock::now();
-#endif
-
 	//// Loading data from file ////
 	hotelCount = 0;
 	endPointTime = 0;
@@ -90,6 +84,12 @@ void evaluateFile() {
 	std::cout << "Bitte geben Sie den Pfad zur Testdatei ein: ";
 	std::getline(std::cin, path);
 
+		// measurement of time
+#ifdef CHRONOMETER
+	calltime = 0;
+	start_point = std::chrono::high_resolution_clock::now();
+#endif
+	
 	// load configs from given file
 	std::ifstream fileStream(path);
 	std::string line;
