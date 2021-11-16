@@ -1,0 +1,18 @@
+﻿  BwInf21-Aufgabe2.cpp
+D:\Projects\SRZ\BwInf-2021\Aufgabe2\BwInf21-Aufgabe2\BwInf21-Aufgabe2.cpp(139,19): warning C4244: '=': conversion from 'double' to 'uint8_t', possible loss of data
+D:\Projects\SRZ\BwInf-2021\Aufgabe2\BwInf21-Aufgabe2\BwInf21-Aufgabe2.cpp(166,15): warning C4244: 'initializing': conversion from '_Rep' to 'uint16_t', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+D:\Projects\SRZ\BwInf-2021\Aufgabe2\BwInf21-Aufgabe2\BwInf21-Aufgabe2.cpp(167,20): warning C4244: 'initializing': conversion from '_Rep' to 'uint16_t', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+D:\Projects\SRZ\BwInf-2021\Aufgabe2\BwInf21-Aufgabe2\BwInf21-Aufgabe2.cpp(168,21): warning C4244: 'initializing': conversion from '_Rep' to 'uint16_t', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  BwInf21-Aufgabe2.vcxproj -> D:\Projects\SRZ\BwInf-2021\Aufgabe2\Debug\BwInf21-Aufgabe2.exe
