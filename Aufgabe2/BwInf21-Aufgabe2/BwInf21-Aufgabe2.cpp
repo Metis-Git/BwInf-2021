@@ -180,23 +180,18 @@ void evaluateFile() {
 int main()
 {
 	std::cout << header;
-
-	evaluateFile();
-
 	std::string answer;
 
 	while (true) {
+		evaluateFile();
 
 		std::cout << "noch eine Datei? [y/n] ";
-		std::getline(std::cin, answer);
 
 		char answer = _getch();
-
 		std::cout << answer << "\n";
-		//while (char c = _getch() != '\n');
+
 
 		if (answer != 'y') break;
-		evaluateFile();
 	}
 }
 
