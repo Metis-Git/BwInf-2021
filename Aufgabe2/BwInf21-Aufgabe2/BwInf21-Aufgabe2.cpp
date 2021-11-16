@@ -6,7 +6,7 @@
 
 #define CHRONOMETER
 #define maxDrivingTime 6*60
-#define maxDays 5
+#define maxHotels 4
 
 struct Hotel {
 	uint8_t rating;
@@ -60,7 +60,7 @@ void eval(int hotel, int prevs[], int level = 0) {
 	}
 
 	// Zeitüberschreitung
-	if (level >= maxDays-1) return;
+	if (level >= maxHotels-1) return;
 
 
 	// executing the next evaluation step
@@ -71,13 +71,10 @@ void eval(int hotel, int prevs[], int level = 0) {
 	}
 }
 
-void evaluateFile() {
 
-	// measurement of time
-#ifdef CHRONOMETER
-	calltime = 0;
-	start_point = std::chrono::high_resolution_clock::now();
-#endif
+
+
+void evaluateFile() {
 
 	//// Loading data from file ////
 	hotelCount = 0;
@@ -88,11 +85,21 @@ void evaluateFile() {
 	std::cout << "Bitte geben Sie den Pfad zur Testdatei ein: ";
 	std::getline(std::cin, path);
 
+		// measurement of time
+#ifdef CHRONOMETER
+	calltime = 0;
+	start_point = std::chrono::high_resolution_clock::now();
+#endif
+	
 	// load configs from given file
 	std::ifstream fileStream(path);
 	std::string line;
 	int lineCount = 0;
 
+	// measurement of time
+	#ifdef CHRONOMETER
+	start_point = std::chrono::high_resolution_clock::now();
+	#endif
 	while (getline(fileStream, line)) {
 		if (lineCount == 0) {
 			//inizializing the hotel-array
@@ -128,12 +135,12 @@ void evaluateFile() {
 	std::cout << "==========\nStarting Search..." << std::endl;
 
 	//
-	bestPath = new int[maxDays];
-	bestPathRating = 0;
+	bestPath = new int[maxHotels];
+	bestPathRating = 0.0;
 	bestPathTime = 10;
 
 	// start evaluation for the hotels reachable on the first day
-	int* heapArray = new int[5];
+	int* heapArray = new int[maxHotels];
 	for (int hotel = 0; hotel < hotelCount; hotel++) {
 		if (hotels[hotel].time > maxDrivingTime) break;
 		eval(hotel, heapArray);
@@ -142,11 +149,12 @@ void evaluateFile() {
 	// printing the result
 	if (bestPathTime > 5) std::cout << "Kein Pfad gefunden" << std::endl;
 	else {
-		std::cout << "Bester Pfad: ";
+		std::cout << "Bester Pfad: Start --> ";
 		for (int i = 0; i <= bestPathTime; i++) {
 			std::cout << std::to_string(bestPath[i]);
 			if (i != bestPathTime) std::cout << " --> ";
 		}
+		std::cout << " --> Ende\n";
 
 		std::cout << " (schlechteste Bewertung: " << ((double)bestPathRating) / 10.0 << ")" << std::endl;
 	}
@@ -182,8 +190,12 @@ int main()
 		std::cout << "noch eine Datei? [y/n] ";
 		std::getline(std::cin, answer);
 
-		if (answer != "y") break;
+		char answer = _getch();
 
+		std::cout << answer << "\n";
+		//while (char c = _getch() != '\n');
+
+		if (answer != 'y') break;
 		evaluateFile();
 	}
 }
