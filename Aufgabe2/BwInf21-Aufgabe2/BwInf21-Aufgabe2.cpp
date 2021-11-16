@@ -29,11 +29,9 @@ unsigned long calltime;
 #endif
 
 void eval(int hotel, int prevs[], int level = 0) {
-	
 #ifdef CHRONOMETER
 	calltime++;
 #endif
-	
 	// better path was already found
 	if (hotels[hotel].rating <= bestPathRating) return;
 
@@ -61,13 +59,8 @@ void eval(int hotel, int prevs[], int level = 0) {
 		}
 	}
 
-<<<<<<< Updated upstream
 	// ZeitÃ¼berschreitung
-	if (level >= maxDays-1) return;
-=======
-	// Zeitüberschreitung
 	if (level >= maxHotels-1) return;
->>>>>>> Stashed changes
 
 
 	// executing the next evaluation step
@@ -103,14 +96,10 @@ void evaluateFile() {
 	std::string line;
 	int lineCount = 0;
 
-<<<<<<< Updated upstream
-=======
 	// measurement of time
 	#ifdef CHRONOMETER
 	start_point = std::chrono::high_resolution_clock::now();
 	#endif
-
->>>>>>> Stashed changes
 	while (getline(fileStream, line)) {
 		if (lineCount == 0) {
 			//inizializing the hotel-array
@@ -146,13 +135,8 @@ void evaluateFile() {
 	std::cout << "==========\nStarting Search..." << std::endl;
 
 	//
-<<<<<<< Updated upstream
-	bestPath = new int[maxDays];
-	bestPathRating = 0;
-=======
 	bestPath = new int[maxHotels];
 	bestPathRating = 0.0;
->>>>>>> Stashed changes
 	bestPathTime = 10;
 
 	// start evaluation for the hotels reachable on the first day
@@ -206,17 +190,12 @@ int main()
 		std::cout << "noch eine Datei? [y/n] ";
 		std::getline(std::cin, answer);
 
-<<<<<<< Updated upstream
-		if (answer != "y") break;
-=======
 		char answer = _getch();
 
 		std::cout << answer << "\n";
 		//while (char c = _getch() != '\n');
 
 		if (answer != 'y') break;
->>>>>>> Stashed changes
-
 		evaluateFile();
 	}
 }
