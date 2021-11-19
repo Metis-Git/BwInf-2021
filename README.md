@@ -4,7 +4,7 @@ Aufgaben: https://bwinf.de/fileadmin/bundeswettbewerb/40/Bundeswettbewerb-Aufgab
 
 ## Struktur
 
-Jede Aufgabe hat ihren eigenen Ordner, dieser ist folgendermaßen strucktuiert:
+Jede Aufgabe hat ihren eigenen Ordner, dieser ist folgendermaßen strukturiert:
 * Augabe
   * bin
     * Ausführbare Datei
