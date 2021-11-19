@@ -25,5 +25,5 @@ Die Dokumentation der Aufgaben sind wie die Aufgaben benannt und befinden sich i
 * Jakob Paridon:
   * Aufgabe 3: "Wortsuche"
 * Karl Jahn:
+  * Junioraufgabe 1: "Zum Winde verweht"
   * Aufgabe 1: "Schiebeparkplatz"
-  * Aufgabe 4: "Würfelglück"
