@@ -9,11 +9,11 @@ Jede Aufgabe hat ihren eigenen Ordner, dieser ist folgendermaßen strukturiert:
 
 * Aufgabe
   * bin
-   * ausführbare Datei
+    * ausführbare Datei
   * resources (optional)
-   * Bilder etc.
+    * Bilder etc.
   * src
-   * Quelldateien
+    * Quelldateien
 
 Die Dokumentation der Aufgaben sind wie die Aufgaben benannt und befinden sich im Hauptordner.
 
