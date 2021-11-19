@@ -2,17 +2,21 @@
 
 Aufgaben: https://bwinf.de/fileadmin/bundeswettbewerb/40/Bundeswettbewerb-Aufgabenblatt.pdf
 
+
 ## Struktur
 
 Jede Aufgabe hat ihren eigenen Ordner, dieser ist folgendermaßen strukturiert:
-* Augabe
+
+* Aufgabe
   * bin
-    * Ausführbare Datei
-  * doc
-    * Dokumentation (pdf - Datei)
-    * optional Beispielbilder
+   * ausführbare Datei
+  * resources (optional)
+   * Bilder etc.
   * src
-    * Quelldateien
+   * Quelldateien
+
+Die Dokumentation der Aufgaben sind wie die Aufgaben benannt und befinden sich im Hauptordner.
+
 
 ## Mitwirkende
 
