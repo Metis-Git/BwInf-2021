@@ -11,7 +11,7 @@ Jede Aufgabe hat ihren eigenen Ordner, dieser ist folgendermaßen strukturiert:
   * bin
     * ausführbare Datei
   * resources (optional)
-    * Bilder etc.
+    * Bilder/Screenshots etc.
   * src
     * Quelldateien
 
