@@ -7,12 +7,12 @@ Aufgaben: https://bwinf.de/fileadmin/bundeswettbewerb/40/Bundeswettbewerb-Aufgab
 Jede Aufgabe hat ihren eigenen Ordner, dieser ist folgendermaßen strucktuiert:
 * Augabe
   * bin
-   + Ausführbare Datei
+    * Ausführbare Datei
   * doc
-   + Dokumentation (pdf - Datei)
-   + optional Beispielbilder
+    * Dokumentation (pdf - Datei)
+    * optional Beispielbilder
   * src
-   + Quelldateien
+    * Quelldateien
 
 ## Mitwirkende
 
