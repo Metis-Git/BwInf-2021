@@ -10,6 +10,7 @@ Jede Aufgabe hat ihren eigenen Ordner, dieser ist folgendermaßen strukturiert:
 * Aufgabe
   * bin
     * ausführbare Datei
+    * ggf. dazugehörige DLLs und Konfigurationsdateien
   * resources (optional)
     * Bilder/Screenshots etc.
   * src
