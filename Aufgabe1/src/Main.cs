@@ -127,7 +127,7 @@ namespace Task1
 
 			for (int t = index; t < parkingSpot.Length; t++)
 			{
-				if (parkingSpot[t].Item1 == 0)
+				if (parkingSpot[t].Item1 == 0)	// Parkplatz frei
 				{
 					if (isX1 || isNullPos == 1) { breakPos = t; break; };
 					isNullPos = 1;
@@ -152,7 +152,7 @@ namespace Task1
 				else if (breakPos != 0 && stepCounter > breakPos + 1) return -1;
 			}
 
-			return isNullPos != -2 ? isNullPos : -1;
+			return -1;
 		}
 
 		private void start_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
